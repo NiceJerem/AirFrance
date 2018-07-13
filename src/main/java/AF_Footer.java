@@ -19,6 +19,12 @@ public class AF_Footer {
     @FindBy(tagName="footer")
     private WebElement footer;
 
+    @FindBy(id="idLink_footer_tab1_0")
+    private WebElement btnNousContacter;
 
-    //private btnNousContacter;
+    public void ClickerNousContacter()
+    {
+        btnNousContacter.click();
+    }
+
 }

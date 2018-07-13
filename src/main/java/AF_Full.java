@@ -11,9 +11,17 @@ public class AF_Full extends AF_Footer{
     public AF_Full(WebDriver driver )
     {
         super(driver);
-
     }
 
     @FindBy(tagName="header")
     private WebElement header;
+
+    @FindBy(tagName="idNavIciLink")
+    private WebElement btnEnregistrement;
+
+    public void clickerBtnEnregistrement()
+    {
+        btnEnregistrement.click();
+    }
+
 }

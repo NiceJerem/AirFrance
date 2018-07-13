@@ -57,8 +57,6 @@ public class TestAirFrance {
         System.out.println("Apres Payer");
     }
 
-
-
     @Test
     public void test1() {
         PageAccueil accueil= new PageAccueil(driver);
@@ -67,12 +65,9 @@ public class TestAirFrance {
         String villeDepart="ORY";
         String villeArrivee="NCE";
 
+        accueil.nousContacterFooter();
+        accueil.choisirEnregistrement();
 
-        accueil.SaisirDepart(villeDepart);
-        accueil.SaisirArrivee(villeArrivee);
-
-        accueil.ChoisirDateDepart(dateDepart );
-        accueil.ChoisirDateArrivee(dateArrivee);
 
 
     }

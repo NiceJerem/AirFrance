@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1fc0eaf-af88-4aeb-9f7a-f31d1314f27f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/PageAccueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/PageAccueil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/PageHorairesTarifs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/PageHorairesTarifs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/TestAirFrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/TestAirFrance.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AF_Footer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AF_Footer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AF_Full.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AF_Full.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PageAccueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageAccueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageDetailsVoyage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageDetailsVoyage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageDonneesPersonnelles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageDonneesPersonnelles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageHorairesTarifs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageHorairesTarifs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestAirFrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestAirFrance.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,10 +27,26 @@
       <file leaf-file-name="TestAirFrance.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestAirFrance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+            <state relative-caret-position="282">
+              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AF_Footer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/AF_Footer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#383#384#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,10 +55,32 @@
       <file leaf-file-name="PageAccueil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PageAccueil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="435">
+              <caret line="204" column="41" selection-start-line="204" selection-start-column="41" selection-end-line="204" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5919#5920#0" expanded="true" />
+                <element signature="e#5939#5940#0" expanded="true" />
+                <element signature="e#6005#6006#0" expanded="true" />
+                <element signature="e#6027#6028#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AF_Full.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/AF_Full.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="40" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#243#244#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -481,13 +511,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/AF_Full.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AF_Footer.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/PageDetailsVoyage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PageAccueil.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageHorairesTarifs.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageDonneesPersonnelles.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AF_Footer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AF_Full.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageAccueil.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestAirFrance.java" />
       </list>
     </option>
@@ -571,7 +601,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestAirFrance.test3">
+  <component name="RunManager" selected="JUnit.TestAirFrance.test1">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -671,8 +701,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAirFrance.test3" />
         <item itemvalue="JUnit.TestAirFrance.test1" />
+        <item itemvalue="JUnit.TestAirFrance.test3" />
         <item itemvalue="JUnit.TestAirFrance.t1" />
       </list>
     </recent_temporary>
@@ -691,24 +721,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestAirFrance_test3 - 2018.07.13 at 15h 47m 08s.xml">
-      <configuration name="TestAirFrance.test3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAirFrance_test3 - 2018.07.13 at 15h 48m 23s.xml">
-      <configuration name="TestAirFrance.test3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAirFrance_test3 - 2018.07.13 at 15h 48m 57s.xml">
-      <configuration name="TestAirFrance.test3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAirFrance_test3 - 2018.07.13 at 15h 52m 04s.xml">
-      <configuration name="TestAirFrance.test3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAirFrance_test3 - 2018.07.13 at 15h 52m 44s.xml">
-      <configuration name="TestAirFrance.test3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestAirFrance_test3 - 2018.07.13 at 15h 54m 02s.xml">
-      <configuration name="TestAirFrance.test3" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestAirFrance_test3 - 2018.07.13 at 15h 55m 32s.xml">
       <configuration name="TestAirFrance.test3" configurationId="JUnit" />
     </history-entry>
@@ -720,6 +732,24 @@
     </history-entry>
     <history-entry file="TestAirFrance_test3 - 2018.07.13 at 16h 00m 30s.xml">
       <configuration name="TestAirFrance.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAirFrance_test1 - 2018.07.13 at 16h 01m 59s.xml">
+      <configuration name="TestAirFrance.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAirFrance_test1 - 2018.07.13 at 16h 03m 00s.xml">
+      <configuration name="TestAirFrance.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAirFrance_test3 - 2018.07.13 at 16h 03m 39s.xml">
+      <configuration name="TestAirFrance.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAirFrance_test3 - 2018.07.13 at 16h 04m 35s.xml">
+      <configuration name="TestAirFrance.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAirFrance_test1 - 2018.07.13 at 16h 13m 46s.xml">
+      <configuration name="TestAirFrance.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAirFrance_test1 - 2018.07.13 at 16h 14m 11s.xml">
+      <configuration name="TestAirFrance.test1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -844,34 +874,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AF_Full.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="1966" selection-start-line="1966" selection-end-line="1966" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AF_Footer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,16 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageAccueil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -931,10 +927,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AF_Full.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AF_Footer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageAccueil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="204" column="41" selection-start-line="204" selection-start-column="41" selection-end-line="204" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#6005#6006#0" expanded="true" />
+            <element signature="e#6027#6028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestAirFrance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+        <state relative-caret-position="282">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

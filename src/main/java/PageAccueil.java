@@ -196,4 +196,13 @@ public class PageAccueil extends AF_Full {
         return new PageHorairesTarifs(driver);
     }
 
+    public void nousContacterFooter()
+    {
+        super.ClickerNousContacter();
+    }
+    public void choisirEnregistrement()
+    {
+        super.clickerBtnEnregistrement();
+    }
+
 }
