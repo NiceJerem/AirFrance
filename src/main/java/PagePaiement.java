@@ -1,0 +1,2 @@
+public class PagePaiement {
+}
