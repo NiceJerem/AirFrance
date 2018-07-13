@@ -14,26 +14,66 @@ public class TestAirFrance {
     }
 
     @Test
-    public void t1() {
+    public void test3() {
         PageAccueil accueil= new PageAccueil(driver);
-        String dateDepart= "20180719";
+        String dateDepart= "20180816";
+        String villeDepart="ORY";
+        String villeArrivee="NCE";
+
+        accueil.ChoisirAllerSimple();
+        accueil.ChoisirDateDepart(dateDepart );
+
+        accueil.SaisirDepart(villeDepart);
+        accueil.SaisirArrivee(villeArrivee);
+
+        PageHorairesTarifs tarifPage=  accueil.rechercher();
+        System.out.println("apres rechercher");
+        tarifPage.ChoisirMeilleurTarifAller(5);
+        System.out.println("apres tarifPage");
+        PageDetailsVoyage detailsPage= tarifPage.continuer();
+        System.out.println("apres details page");
+        PageDonneesPersonnelles persoPage=detailsPage.continuer();
+        //-------------------------------
+        persoPage.fermerPopup();
+        String nom="toto";
+        String prenom="toto";
+        String email="toto@toto.com";
+        String telephone="611223344";
+        persoPage.choisirMonsieur();
+        System.out.println("Apres cocherPasDassurance");
+        persoPage.cocherPasDassurance();
+        persoPage.saisirNom(nom);
+        persoPage.saisirPrenom(prenom);
+        persoPage.saisirEmail(email);
+        persoPage.saisirEmailConfirm(email);
+        persoPage.saisirTelephone(telephone);
+        System.out.println("Apres telephone");
+
+        persoPage.cocherCGU();
+        System.out.println("Apres cocherCGU");
+        persoPage.cocherCGU();
+        System.out.println("Apres cocherCGU");
+        persoPage.payer();
+        System.out.println("Apres Payer");
+    }
+
+
+
+    @Test
+    public void test1() {
+        PageAccueil accueil= new PageAccueil(driver);
+        String dateDepart= "20180716";
         String dateArrivee= "20180721";
-        String villeDepart="NCE";
-        String villeArrivee="CDG";
-
-        int nbAdultes =3;
-     //   accueil.ChoisirAllerSimple();
+        String villeDepart="ORY";
+        String villeArrivee="NCE";
 
 
-    //
-        //accueil.SaisirArrivee(villeArrivee);
-        //accueil.ChoisirDateArrivee(dateArrivee);
-        //accueil.ChoisirDateDepart(dateDepart );
-        //accueil.SaisirDepart(villeDepart);
+        accueil.SaisirDepart(villeDepart);
+        accueil.SaisirArrivee(villeArrivee);
 
+        accueil.ChoisirDateDepart(dateDepart );
+        accueil.ChoisirDateArrivee(dateArrivee);
 
-        accueil.ChoisirNombreAdulte(nbAdultes);
-      //  accueil.rechercher();
 
     }
 }

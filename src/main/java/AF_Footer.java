@@ -18,4 +18,7 @@ public class AF_Footer {
 
     @FindBy(tagName="footer")
     private WebElement footer;
+
+
+    //private btnNousContacter;
 }

@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,13 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import javax.sound.midi.Soundbank;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class PageAccueil extends AF_Full {
 
     public PageAccueil(WebDriver driver )
     {
         super(driver);
-
     }
 
 
@@ -24,8 +25,7 @@ public class PageAccueil extends AF_Full {
     WebElement depart;
     public void SaisirDepart(String  aeroport)
     {
-
-        depart.sendKeys(aeroport);
+        depart.sendKeys(aeroport + Keys.ENTER);
     }
 
 
@@ -33,17 +33,18 @@ public class PageAccueil extends AF_Full {
     WebElement arrivee;
     public void SaisirArrivee(String  aeroport)
     {
-
-        arrivee.sendKeys(aeroport);
+        arrivee.sendKeys(aeroport+ Keys.ENTER);
     }
 
     @FindBy(id="minibe__roundTrip--label")
     WebElement ButtonRetour;
     public void ChoisirRetour(  )
     {
-
         ButtonRetour.click();
     }
+    //
+    @FindBy(xpath="//*[@id=\"calendar\"]/header/button")
+    WebElement btnCloseCalendar;
 
 
 
@@ -60,6 +61,60 @@ public class PageAccueil extends AF_Full {
     @FindBy(xpath="//*[@id=\"calendar\"]/header/div[2]/button[2]")
     WebElement btnMoisProchain;
 
+    public void dateOperation(String date)
+    {
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println("dateD :"+ date);
+        String year =date.substring(0,4);
+
+        int yearInt = Integer.parseInt(year);
+        System.out.println("year :"+ year);
+        System.out.println("dateD :"+ date);
+        String month= date.substring(4,6);
+        //-------------
+        System.out.println("month :"+ month);
+        int monthInt = Integer.parseInt(month);
+        int actualMonth = now.getMonthValue();
+        int actualYear = now.getYear();
+        if(monthInt< 10)
+        {
+            System.out.println("getInteger :"+ month);
+            month= String.valueOf(monthInt);
+            System.out.println("getInteger apres:"+ month);
+        }
+        if(actualMonth> monthInt)
+        {
+
+        }
+
+        String idCal = year +month;
+        System.out.println("idCal :"+ idCal);
+        String idCalendrier ="calendar"+idCal;
+
+
+
+        Actions actions = new Actions(driver);
+        System.out.println("avant Find Element "+idCalendrier);
+        calendrier = driver.findElement(By.id(idCalendrier));
+
+        System.out.println("avant wait.until "+idCalendrier);
+        actions.moveToElement(calendrier);
+        actions.build().perform();
+        actions.click();
+        actions.build().perform();
+        //
+        //calendar--20180713
+        System.out.println("apres wait.until "+idCalendrier);
+        WebDriverWait wait = new WebDriverWait(driver,5);
+
+        String idDate ="calendar--"+date ;
+        WebElement tddate =  calendrier.findElement(By.id( idDate));
+        wait.until(ExpectedConditions.visibilityOf(tddate));
+        actions.moveToElement(tddate);
+        actions.build().perform();
+        actions.click();
+        actions.build().perform();
+    }
 
     @FindBy(id="minibe__button--calendar_out")
     WebElement dateDepart;
@@ -69,45 +124,18 @@ public class PageAccueil extends AF_Full {
         LocalDateTime now = LocalDateTime.now();
         dateDepart.click();
         //calendar20188
-        System.out.println("dateD :"+ dateD);
-        String year =dateD.substring(0,4);
-        int yearInt = Integer.parseInt(year);
-        System.out.println("year :"+ year);
-        System.out.println("dateD :"+ dateD);
-        String month= dateD.substring(4,6);
-        System.out.println("month :"+ month);
-        int monthInt = Integer.parseInt(month);
-        int actualMonth = now.getMonthValue();
-        int actualYear = now.getYear();
-        if(monthInt< 10)
-        {
-            System.out.println("getInteger :"+ month);
-            month= String.valueOf(monthInt);
-            System.out.println("getInteger apres:"+ month);
-        }
-        if(actualMonth> monthInt)
-        {
-            /*
-            int differenceMois = monthInt - actualMonth;
-            for(int i=0;i<differenceMois;i++)
-            {
-                btnMoisProchain.click();
-            }
-            */
-        }
-
-        String idCal = year +month;
-        System.out.println("idCal :"+ idCal);
-        String idCalendrier ="calendar"+idCal;
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        System.out.println("avant Find Element "+idCalendrier);
-        calendrier = driver.findElement(By.id(idCalendrier));
-        System.out.println("avant wait.until "+idCalendrier);
-        wait.until(ExpectedConditions.visibilityOf(calendrier));
-        //calendar--20180713
-        System.out.println("apres wait.until "+idCalendrier);
+        dateOperation(dateD);
+        //-----------
+        /*
+        Actions actions = new Actions(driver);
         String idDate ="calendar--"+dateD ;
-        calendrier.findElement(By.id(idDate)).click();
+        WebElement date =  calendrier.findElement(By.id( idDate));
+        actions.moveToElement(date);
+        actions.build().perform();
+        actions.click();
+        actions.build().perform();
+        */
+        //btnCloseCalendar.click();
     }
 
     @FindBy(id="minibe__button--calendar_in")
@@ -116,50 +144,12 @@ public class PageAccueil extends AF_Full {
     {
         System.out.println("-----------------------");
         System.out.println("Entree Date Arrivee");
-        //dateD = 20180816
-        LocalDateTime now = LocalDateTime.now();
         dateArrivee.click();
-        //calendar20188
-        System.out.println("dateD :"+ dateA);
-        String year =dateA.substring(0,4);
-        int yearInt = Integer.parseInt(year);
-        System.out.println("year :"+ year);
-        System.out.println("dateD :"+ dateA);
-        String month= dateA.substring(4,6);
-        System.out.println("month :"+ month);
-        int monthInt = Integer.parseInt(month);
-        int actualMonth = now.getMonthValue();
-        int actualYear = now.getYear();
-        if(monthInt< 10)
-        {
-            System.out.println("getInteger :"+ month);
-            month= String.valueOf(monthInt);
-            System.out.println("getInteger apres:"+ month);
-        }
-        if(actualMonth> monthInt)
-        {
-            /*
-            int differenceMois = monthInt - actualMonth;
-            for(int i=0;i<differenceMois;i++)
-            {
-                btnMoisProchain.click();
-            }
-            */
-        }
-
-        String idCal = year +month;
-        System.out.println("idCal :"+ idCal);
-        String idCalendrier ="calendar"+idCal;
-        System.out.println("idCalendrier :"+ idCalendrier);
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        System.out.println("apres wait :"+ idCalendrier);
-        calendrier = driver.findElement(By.id(idCalendrier));
-        System.out.println("apres calendrier :"+ idCalendrier);
-        wait.until(ExpectedConditions.visibilityOf(calendrier));
-        System.out.println("apres wait :"+ idCalendrier);
-        //calendar--20180713
+        //dateD = 20180816
+        dateOperation(dateA);
         String idDate ="calendar--"+dateA ;
         calendrier.findElement(By.id(idDate)).click();
+        btnCloseCalendar.click();
     }
 
 
@@ -180,9 +170,10 @@ public class PageAccueil extends AF_Full {
 
         String inputBtnNbAdulte="tnr__itp__"+nbAdultes;
         System.out.println(" id:"+ inputBtnNbAdulte);
-
-        //tnr__itp__3
-        WebElement btnNbrPassager = menuPassager.findElement(By.id(inputBtnNbAdulte));
+        actions.moveToElement(menuPassager);
+        WebElement btnArea = driver.findElement(By.xpath("//*[@id=\"typology__paxNum\"]/div"));
+        actions.moveToElement(btnArea);
+        WebElement btnNbrPassager = btnArea.findElement(By.id(inputBtnNbAdulte));
         actions.moveToElement(btnNbrPassager);
         System.out.println(" apres move:"+ inputBtnNbAdulte);
         actions.build().perform();
@@ -191,18 +182,18 @@ public class PageAccueil extends AF_Full {
         System.out.println(" click:"+ inputBtnNbAdulte);
         actions.build().perform();
         System.out.println(" End:"+ inputBtnNbAdulte);
-        //wait.until(ExpectedConditions.elementToBeClickable(btnNbrPassager));
-        //btnNbrPassager.click();
+
         ////*[@id="tnr__itp__3"]
         //
     }
 
     @FindBy(id="minibe__button--search")
     WebElement btnRechercher;
-    public void rechercher(  )
+    public PageHorairesTarifs rechercher(  )
     {
 
         btnRechercher.click();
+        return new PageHorairesTarifs(driver);
     }
 
 }
